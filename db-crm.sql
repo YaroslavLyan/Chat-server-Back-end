@@ -8,7 +8,7 @@ create table users (
 	id serial Primary key,
 	name varchar(30) DEFAULT 'Not name' not null,
 	login varchar(30) not null,
-	passw varchar(30) not null,
+	passw varchar(100) not null,
 	rule smallint DEFAULT 1 not null
 );
 
@@ -16,7 +16,7 @@ create index ind_admins_login on users using hash (login);
 create index ind_admins_passw on users using hash (passw);
 
 
-INSERT INTO admins (id, name, login, passw, rule) VALUES
+INSERT INTO users (id, name, login, passw, rule) VALUES
 	 (1,'Yaroslav Lyan','Yaroslav','$2a$10$A2Nt7VXd69TSjOxVX4pvdOXdBU5VPgkrU9dUHKWNdvjLX0PregAHW',1),
 	 (2,'Mihail Kievcev','Mihail','$2a$10$A2Nt7VXd69TSjOxVX4pvdOXdBU5VPgkrU9dUHKWNdvjLX0PregAHW',2),
 	 (3,'Anton Panchenko','Anton','$2a$10$A2Nt7VXd69TSjOxVX4pvdOXdBU5VPgkrU9dUHKWNdvjLX0PregAHW',2),
@@ -25,6 +25,6 @@ INSERT INTO admins (id, name, login, passw, rule) VALUES
 
 CREATE FUNCTION check_login_and_password(l_login CHARACTER VARYING, l_pass CHARACTER VARYING) RETURNS boolean AS
 $$
-SELECT EXISTS(SELECT * FROM admins WHERE admins.login = l_login AND admins.pass = l_pass );
+SELECT EXISTS(SELECT * FROM users WHERE users.login = l_login AND users.passw = l_pass );
 $$
 LANGUAGE sql;
