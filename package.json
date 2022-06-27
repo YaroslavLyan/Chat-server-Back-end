@@ -1,0 +1,27 @@
+{
+  "name": "chat-back",
+  "version": "1.0.0",
+  "description": "backend - morze_chat",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "YaroslavL",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-validator": "^6.14.2",
+    "helmet": "^5.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^2.1.0",
+    "path": "^0.12.7",
+    "pg": "^8.7.3",
+    "ws": "^8.8.0"
+  }
+}
