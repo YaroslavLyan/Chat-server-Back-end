@@ -6,3 +6,12 @@ module.exports = {
     password : 'f20f042ac47ff143edb259556a3321ad1b62f3c9352940eb50565b33271ae7b2',
     database : 'd2ens1fle57i0v'
 };
+
+module.exports = {
+    tokenKey: '1a2b-3c4d-5e6f-7g8h',
+    host : 'localhost',
+    port : 5432,
+    user : 'postgres',
+    password : 'admin',
+    database : 'chat'
+};

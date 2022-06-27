@@ -2,7 +2,8 @@
 
 # dependencies
 /node_modules
-/utils/keys.dev.js
+/utils/keys.herok.js
+.env
 .pnp.js
 
 # testing
