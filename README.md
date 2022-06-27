@@ -4,10 +4,17 @@
 - messages to the client are entered and displayed only using the Morse code
 - communication is only possible between 2 chat subscribers
 - communication is possible only between authorized users
-- to send a message in the client, you need to specify the name of the recipient and the message
-- delimited access level
+- you need to specify the name of the recipient and the text to send a message
+- different access levels
 - the server should not store the history of correspondence
-- user management page (add / ban / remove)
+- user management page (add / ban / remove users)
+
+Deployed: https://chat-server-morsa-app.herokuapp.com/
+login: Yaroslav
+Password: 123456
+
+Front-End: https://github.com/YaroslavLyan/Chat-server-Front-End
+SQL query to create DB: https://github.com/YaroslavLyan/Chat-server-Back-end/blob/main/db-crm.sql
 
 ## Used:
 - Node.js
