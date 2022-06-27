@@ -2,7 +2,10 @@ const keys = require('./config');
 
 const knex = require('knex')({
     client: 'pg',
-    connection: keys.uri
+    connection: {
+      connectionString: keys.uri,
+      ssl: { rejectUnauthorized: false }
+    }
   });
 
 module.exports = knex;
